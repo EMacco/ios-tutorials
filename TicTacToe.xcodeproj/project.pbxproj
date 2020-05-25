@@ -145,7 +145,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1140;
-				ORGANIZATIONNAME = Skarpa;
+				ORGANIZATIONNAME = Macco;
 				TargetAttributes = {
 					12D445C2247A02AA00CC0259 = {
 						CreatedOnToolsVersion = 11.4;
