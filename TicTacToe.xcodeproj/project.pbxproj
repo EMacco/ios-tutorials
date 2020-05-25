@@ -14,6 +14,7 @@
 		12D445D0247A02AC00CC0259 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12D445CF247A02AC00CC0259 /* Assets.xcassets */; };
 		12D445D3247A02AC00CC0259 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D445D1247A02AC00CC0259 /* LaunchScreen.storyboard */; };
 		12D445DE247A02AC00CC0259 /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D445DD247A02AC00CC0259 /* TicTacToeTests.swift */; };
+		12D445ED247A208500CC0259 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D445EC247A208500CC0259 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		12D445D9247A02AC00CC0259 /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D445DD247A02AC00CC0259 /* TicTacToeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeTests.swift; sourceTree = "<group>"; };
 		12D445DF247A02AC00CC0259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12D445EC247A208500CC0259 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				12D445CF247A02AC00CC0259 /* Assets.xcassets */,
 				12D445D1247A02AC00CC0259 /* LaunchScreen.storyboard */,
 				12D445D4247A02AC00CC0259 /* Info.plist */,
+				12D445EC247A208500CC0259 /* GameViewController.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -145,7 +148,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1140;
-				ORGANIZATIONNAME = Skarpa;
+				ORGANIZATIONNAME = Macco;
 				TargetAttributes = {
 					12D445C2247A02AA00CC0259 = {
 						CreatedOnToolsVersion = 11.4;
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D445ED247A208500CC0259 /* GameViewController.swift in Sources */,
 				12D445CB247A02AA00CC0259 /* ViewController.swift in Sources */,
 				12D445C7247A02AA00CC0259 /* AppDelegate.swift in Sources */,
 				12D445C9247A02AA00CC0259 /* SceneDelegate.swift in Sources */,
