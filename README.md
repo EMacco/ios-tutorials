@@ -7,3 +7,5 @@ This repo contains projects that were developed throughout the tutorial series
 - [Gesture Recognizers (Animal Gallery)](https://github.com/EMacco/ios-tutorials/tree/gesture-recognizers)
 - [Tic-Tac-Toe Starter](https://github.com/EMacco/ios-tutorials/tree/TicTacToe-Starter)
 - [Tic-Tac-Toe Complete](https://github.com/EMacco/ios-tutorials/tree/TicTacToe-Complete)
+- [Observer Communication Pattern Starter](https://github.com/EMacco/ios-tutorials/tree/notification-observer-starter)
+- [Observer Communication Pattern Complete](https://github.com/EMacco/ios-tutorials/tree/notification-observer-complete)
