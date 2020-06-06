@@ -9,3 +9,5 @@ This repo contains projects that were developed throughout the tutorial series
 - [Tic-Tac-Toe Complete](https://github.com/EMacco/ios-tutorials/tree/TicTacToe-Complete)
 - [Observer Communication Pattern Starter](https://github.com/EMacco/ios-tutorials/tree/notification-observer-starter)
 - [Observer Communication Pattern Complete](https://github.com/EMacco/ios-tutorials/tree/notification-observer-complete)
+- [Light-Bulb Starter](https://github.com/EMacco/ios-tutorials/tree/delegate-protocol-starter)
+- [Light-Bulb Complete](https://github.com/EMacco/ios-tutorials/tree/delegate-protocol-complete)
