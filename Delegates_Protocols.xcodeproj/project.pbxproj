@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		1248567B248B360500598E2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248567A248B360500598E2D /* AppDelegate.swift */; };
 		1248567D248B360500598E2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248567C248B360500598E2D /* SceneDelegate.swift */; };
-		1248567F248B360500598E2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248567E248B360500598E2D /* ViewController.swift */; };
 		12485682248B360500598E2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12485680248B360500598E2D /* Main.storyboard */; };
 		12485684248B360700598E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12485683248B360700598E2D /* Assets.xcassets */; };
 		12485687248B360700598E2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12485685248B360700598E2D /* LaunchScreen.storyboard */; };
+		1248568F248B3EE900598E2D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1248568E248B3EE900598E2D /* MainViewController.swift */; };
+		12485691248B3EFB00598E2D /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12485690248B3EFB00598E2D /* SwitchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12485677248B360500598E2D /* Delegates_Protocols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delegates_Protocols.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1248567A248B360500598E2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1248567C248B360500598E2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1248567E248B360500598E2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		12485681248B360500598E2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12485683248B360700598E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12485686248B360700598E2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12485688248B360700598E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1248568E248B3EE900598E2D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		12485690248B3EFB00598E2D /* SwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				1248567A248B360500598E2D /* AppDelegate.swift */,
 				1248567C248B360500598E2D /* SceneDelegate.swift */,
-				1248567E248B360500598E2D /* ViewController.swift */,
 				12485680248B360500598E2D /* Main.storyboard */,
+				1248568E248B3EE900598E2D /* MainViewController.swift */,
+				12485690248B3EFB00598E2D /* SwitchViewController.swift */,
 				12485683248B360700598E2D /* Assets.xcassets */,
 				12485685248B360700598E2D /* LaunchScreen.storyboard */,
 				12485688248B360700598E2D /* Info.plist */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1248567F248B360500598E2D /* ViewController.swift in Sources */,
+				1248568F248B3EE900598E2D /* MainViewController.swift in Sources */,
 				1248567B248B360500598E2D /* AppDelegate.swift in Sources */,
+				12485691248B3EFB00598E2D /* SwitchViewController.swift in Sources */,
 				1248567D248B360500598E2D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

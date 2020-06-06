@@ -1,24 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Delegates_Protocols" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulbOff" translatesAutoresizingMaskIntoConstraints="NO" id="gSu-kn-Udp">
+                                <rect key="frame" x="143" y="389" width="128" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gSu-kn-Udp" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="I5S-pG-6kT"/>
+                            <constraint firstItem="gSu-kn-Udp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tN8-Fw-BTJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bulbImageView" destination="gSu-kn-Udp" id="d1k-oj-bIA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="121.875"/>
+        </scene>
+        <!--Switch View Controller-->
+        <scene sceneID="QyB-iP-MPK">
+            <objects>
+                <viewController storyboardIdentifier="SwitchViewController" id="bQI-8X-RZq" customClass="SwitchViewController" customModule="Delegates_Protocols" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UZ4-91-Bbj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hyI-g7-PbM">
+                                <rect key="frame" x="182.5" y="437.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchToggled:" destination="bQI-8X-RZq" eventType="valueChanged" id="kOY-th-9JO"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hyI-g7-PbM" firstAttribute="centerY" secondItem="NR7-mJ-m6W" secondAttribute="centerY" id="Olw-cf-fto"/>
+                            <constraint firstItem="hyI-g7-PbM" firstAttribute="centerX" secondItem="NR7-mJ-m6W" secondAttribute="centerX" id="YVV-1O-4aE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NR7-mJ-m6W"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gGY-kN-ayh"/>
+                    <connections>
+                        <outlet property="switchView" destination="hyI-g7-PbM" id="yMP-kY-clz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwl-eD-V6Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="122"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bulbOff" width="128" height="128"/>
+    </resources>
 </document>
