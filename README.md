@@ -11,3 +11,4 @@ This repo contains projects that were developed throughout the tutorial series
 - [Observer Communication Pattern Complete](https://github.com/EMacco/ios-tutorials/tree/notification-observer-complete)
 - [Light-Bulb Starter](https://github.com/EMacco/ios-tutorials/tree/delegate-protocol-starter)
 - [Light-Bulb Complete](https://github.com/EMacco/ios-tutorials/tree/delegate-protocol-complete)
+- [CollectionView Complete](https://github.com/EMacco/ios-tutorials/tree/CollectionViews-Complete)
