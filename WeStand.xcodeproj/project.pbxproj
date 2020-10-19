@@ -13,6 +13,7 @@
 		12084D07253BB27400A68601 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12084D05253BB27400A68601 /* Main.storyboard */; };
 		12084D09253BB27600A68601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12084D08253BB27600A68601 /* Assets.xcassets */; };
 		12084D0C253BB27600A68601 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12084D0A253BB27600A68601 /* LaunchScreen.storyboard */; };
+		32DE385D027F159973C61685 /* Pods_WeStand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478558DC52D77C9F636381D5 /* Pods_WeStand.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		12084D08253BB27600A68601 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12084D0B253BB27600A68601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12084D0D253BB27600A68601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F236823AAE4B22205087F01 /* Pods-WeStand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeStand.release.xcconfig"; path = "Target Support Files/Pods-WeStand/Pods-WeStand.release.xcconfig"; sourceTree = "<group>"; };
+		478558DC52D77C9F636381D5 /* Pods_WeStand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeStand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE6E7E63B096094336446A78 /* Pods-WeStand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeStand.debug.xcconfig"; path = "Target Support Files/Pods-WeStand/Pods-WeStand.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32DE385D027F159973C61685 /* Pods_WeStand.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				12084CFE253BB27400A68601 /* WeStand */,
 				12084CFD253BB27400A68601 /* Products */,
+				41DC1B3273DA06B66485E1B7 /* Pods */,
+				3CEF365B32D4A06064C63978 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = WeStand;
 			sourceTree = "<group>";
 		};
+		3CEF365B32D4A06064C63978 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				478558DC52D77C9F636381D5 /* Pods_WeStand.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41DC1B3273DA06B66485E1B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E7E63B096094336446A78 /* Pods-WeStand.debug.xcconfig */,
+				2F236823AAE4B22205087F01 /* Pods-WeStand.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12084D10253BB27600A68601 /* Build configuration list for PBXNativeTarget "WeStand" */;
 			buildPhases = (
+				8CBA2F3BA9B9C116E6BB3D47 /* [CP] Check Pods Manifest.lock */,
 				12084CF8253BB27400A68601 /* Sources */,
 				12084CF9253BB27400A68601 /* Frameworks */,
 				12084CFA253BB27400A68601 /* Resources */,
+				938A9E48E7AA35B04FD5C7B5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8CBA2F3BA9B9C116E6BB3D47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeStand-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		938A9E48E7AA35B04FD5C7B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeStand/Pods-WeStand-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeStand/Pods-WeStand-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeStand/Pods-WeStand-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		12084CF8253BB27400A68601 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		12084D11253BB27600A68601 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE6E7E63B096094336446A78 /* Pods-WeStand.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		12084D12253BB27600A68601 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F236823AAE4B22205087F01 /* Pods-WeStand.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
