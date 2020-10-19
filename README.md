@@ -14,3 +14,5 @@ This repo contains projects that were developed throughout the tutorial series
 - [CollectionView Complete](https://github.com/EMacco/ios-tutorials/tree/CollectionViews-Complete)
 - [RetainCycle](https://github.com/EMacco/ios-tutorials/tree/RetainCycle)
 - [Semaphores](https://github.com/EMacco/ios-tutorials/tree/Semaphores)
+- [#EndSARS Starter](https://github.com/EMacco/ios-tutorials/tree/EndSARS-Starter)
+- [#EndSARS Complete](https://github.com/EMacco/ios-tutorials/tree/EndSARS-Complete)
