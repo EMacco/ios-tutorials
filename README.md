@@ -18,3 +18,4 @@ This repo contains projects that were developed throughout the tutorial series
 - [#EndSARS Complete](https://github.com/EMacco/ios-tutorials/tree/EndSARS-Complete)
 - [URLSession DataTask](https://github.com/EMacco/ios-tutorials/tree/URLSessionDataTask)
 - [URLSession DownloadTask](https://github.com/EMacco/ios-tutorials/tree/URL-Session-Download-Task)
+- [Encodable & Decodable](https://github.com/EMacco/ios-tutorials/tree/Encodable-Decodable)
