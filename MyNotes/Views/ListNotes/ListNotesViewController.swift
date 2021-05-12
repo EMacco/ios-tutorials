@@ -6,25 +6,14 @@
 //
 
 import UIKit
-
-protocol ListNotesDelegate: class {
-    func refreshNotes()
-    func deleteNote(with id: UUID)
-}
+import CoreData
 
 class ListNotesViewController: UIViewController {
     
     @IBOutlet weak private var tableView: UITableView!
     @IBOutlet weak private var notesCountLbl: UILabel!
     private let searchController = UISearchController()
-    
-    private var allNotes: [Note] = [] {
-        didSet {
-            notesCountLbl.text = "\(allNotes.count) \(allNotes.count == 1 ? "Note" : "Notes")"
-            filteredNotes = allNotes
-        }
-    }
-    private var filteredNotes: [Note] = []
+    private var fetchedResultsController: NSFetchedResultsController<Note>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +21,20 @@ class ListNotesViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         tableView.contentInset = .init(top: 0, left: 0, bottom: 30, right: 0)
         configureSearchBar()
-        fetchNotesFromStorage()
+        setupFetchedResultsController()
+        refreshCountLbl()
     }
     
-    private func indexForNote(id: UUID, in list: [Note]) -> IndexPath {
-        let row = Int(list.firstIndex(where: { $0.id == id }) ?? 0)
-        return IndexPath(row: row, section: 0)
+    func refreshCountLbl() {
+        let count = fetchedResultsController.sections![0].numberOfObjects
+        notesCountLbl.text = "\(count) \(count == 1 ? "Note" : "Notes")"
+    }
+    
+    func setupFetchedResultsController(filter: String? = nil) {
+        fetchedResultsController = CoreDataManager.shared.createNotesFetchedResultsController(filter: filter)
+        fetchedResultsController.delegate = self
+        try? fetchedResultsController.performFetch()
+        refreshCountLbl()
     }
     
     private func configureSearchBar() {
@@ -54,54 +51,48 @@ class ListNotesViewController: UIViewController {
     private func goToEditNote(_ note: Note) {
         let controller = storyboard?.instantiateViewController(identifier: EditNoteViewController.identifier) as! EditNoteViewController
         controller.note = note
-        controller.delegate = self
         navigationController?.pushViewController(controller, animated: true)
     }
     
     // MARK:- Methods to implement
     private func createNote() -> Note {
         let note = CoreDataManager.shared.createNote()
-        // Update table
-        allNotes.insert(note, at: 0)
-        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
-        
         return note
     }
     
-    private func fetchNotesFromStorage() {
-        allNotes = CoreDataManager.shared.fetchNotes()
-    }
-    
     private func deleteNoteFromStorage(_ note: Note) {
-        deleteNote(with: note.id)
         CoreDataManager.shared.deleteNote(note)
-    }
-    
-    private func searchNotesFromStorage(_ text: String) {
-        allNotes = CoreDataManager.shared.fetchNotes(filter: text)
-        tableView.reloadData()
     }
 }
 
 // MARK: TableView Configuration
 extension ListNotesViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return fetchedResultsController.sections?.count ?? 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredNotes.count
+        let notes = fetchedResultsController.sections![section]
+        return notes.numberOfObjects
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ListNoteTableViewCell.identifier) as! ListNoteTableViewCell
-        cell.setup(note: filteredNotes[indexPath.row])
+        let note = fetchedResultsController.object(at: indexPath)
+        cell.setup(note: note)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        goToEditNote(filteredNotes[indexPath.row])
+        let note = fetchedResultsController.object(at: indexPath)
+        goToEditNote(note)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            deleteNoteFromStorage(filteredNotes[indexPath.row])
+            let note = fetchedResultsController.object(at: indexPath)
+            deleteNoteFromStorage(note)
         }
     }
     
@@ -122,35 +113,43 @@ extension ListNotesViewController: UISearchControllerDelegate, UISearchBarDelega
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let query = searchBar.text, !query.isEmpty else { return }
-        searchNotesFromStorage(query)
+        search(searchBar.text ?? "")
     }
     
     func search(_ query: String) {
         if query.count >= 1 {
-            filteredNotes = allNotes.filter { $0.text.lowercased().contains(query.lowercased()) }
+            setupFetchedResultsController(filter: query)
         } else{
-            filteredNotes = allNotes
+            setupFetchedResultsController()
         }
         
         tableView.reloadData()
     }
 }
 
-// MARK:- ListNotes Delegate
-extension ListNotesViewController: ListNotesDelegate {
+// MARK:- NSFetchedResultsController Delegates
+extension ListNotesViewController: NSFetchedResultsControllerDelegate {
     
-    func refreshNotes() {
-        allNotes = allNotes.sorted { $0.lastUpdated > $1.lastUpdated }
-        tableView.reloadData()
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
     }
     
-    func deleteNote(with id: UUID) {
-        let indexPath = indexForNote(id: id, in: filteredNotes)
-        filteredNotes.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .automatic)
-        
-        // just so that it doesn't come back when we search from the array
-        allNotes.remove(at: indexForNote(id: id, in: allNotes).row)
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            tableView.insertRows(at: [newIndexPath!], with: .automatic)
+        case .delete:
+            tableView.deleteRows(at: [indexPath!], with: .automatic)
+        case .update:
+            tableView.reloadRows(at: [indexPath!], with: .automatic)
+        case .move:
+            tableView.moveRow(at: indexPath!, to: newIndexPath!)
+        default: tableView.reloadData()
+        }
+        refreshCountLbl()
     }
 }
