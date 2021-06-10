@@ -24,6 +24,12 @@
 		12306A6825E1D01600C6FBC5 /* ListDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12306A6725E1D01600C6FBC5 /* ListDishesViewController.swift */; };
 		12306A6D25E1D53E00C6FBC5 /* ListOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12306A6C25E1D53E00C6FBC5 /* ListOrdersViewController.swift */; };
 		12306A7025E1D5F500C6FBC5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12306A6F25E1D5F500C6FBC5 /* Order.swift */; };
+		129051DA267236FB00A0B8F3 /* AllDishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129051D9267236FB00A0B8F3 /* AllDishes.swift */; };
+		12987170263CB89200A81962 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298716F263CB89200A81962 /* NetworkService.swift */; };
+		12987175263CB92E00A81962 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12987174263CB92E00A81962 /* Route.swift */; };
+		12987178263CB9FE00A81962 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12987177263CB9FE00A81962 /* Method.swift */; };
+		1298717B263CC2D300A81962 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298717A263CC2D300A81962 /* AppError.swift */; };
+		1298717E263CC84700A81962 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1298717D263CC84700A81962 /* ApiResponse.swift */; };
 		129BF1CF25C50A19002B4321 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129BF1CE25C50A19002B4321 /* OnboardingViewController.swift */; };
 		129BF1D425C50BBA002B4321 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129BF1D325C50BBA002B4321 /* UIView+Extension.swift */; };
 		129BF1D825C50C9C002B4321 /* OnboaringSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129BF1D725C50C9C002B4321 /* OnboaringSlide.swift */; };
@@ -56,6 +62,12 @@
 		12306A6725E1D01600C6FBC5 /* ListDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDishesViewController.swift; sourceTree = "<group>"; };
 		12306A6C25E1D53E00C6FBC5 /* ListOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOrdersViewController.swift; sourceTree = "<group>"; };
 		12306A6F25E1D5F500C6FBC5 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		129051D9267236FB00A0B8F3 /* AllDishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDishes.swift; sourceTree = "<group>"; };
+		1298716F263CB89200A81962 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		12987174263CB92E00A81962 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		12987177263CB9FE00A81962 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		1298717A263CC2D300A81962 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		1298717D263CC84700A81962 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		129BF1CE25C50A19002B4321 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		129BF1D325C50BBA002B4321 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		129BF1D725C50C9C002B4321 /* OnboaringSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboaringSlide.swift; sourceTree = "<group>"; };
@@ -170,6 +182,18 @@
 			path = ListOrders;
 			sourceTree = "<group>";
 		};
+		1298716E263CB87E00A81962 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1298716F263CB89200A81962 /* NetworkService.swift */,
+				12987174263CB92E00A81962 /* Route.swift */,
+				12987177263CB9FE00A81962 /* Method.swift */,
+				1298717A263CC2D300A81962 /* AppError.swift */,
+				1298717D263CC84700A81962 /* ApiResponse.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		129BF1CA25C509C0002B4321 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +201,7 @@
 				12306A0825E13EC300C6FBC5 /* DishCategory.swift */,
 				12306A1E25E147A400C6FBC5 /* Dish.swift */,
 				12306A6F25E1D5F500C6FBC5 /* Order.swift */,
+				129051D9267236FB00A0B8F3 /* AllDishes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,6 +276,7 @@
 		12C67D2625C506BC00664C7C /* Yummie */ = {
 			isa = PBXGroup;
 			children = (
+				1298716E263CB87E00A81962 /* Networking */,
 				129BF1D225C50BAB002B4321 /* Extensions */,
 				129BF1CC25C509DE002B4321 /* CustomViews */,
 				129BF1CB25C509CD002B4321 /* Views */,
@@ -407,16 +433,22 @@
 				12306A0525E13E1C00C6FBC5 /* CategoryCollectionViewCell.swift in Sources */,
 				12C67D2825C506BC00664C7C /* AppDelegate.swift in Sources */,
 				12C67D2A25C506BC00664C7C /* SceneDelegate.swift in Sources */,
+				129051DA267236FB00A0B8F3 /* AllDishes.swift in Sources */,
 				129BF1D425C50BBA002B4321 /* UIView+Extension.swift in Sources */,
+				12987178263CB9FE00A81962 /* Method.swift in Sources */,
 				129BF1CF25C50A19002B4321 /* OnboardingViewController.swift in Sources */,
 				129BF1D825C50C9C002B4321 /* OnboaringSlide.swift in Sources */,
 				12306A2A25E1AE6400C6FBC5 /* DishDetailViewController.swift in Sources */,
 				12306A2525E1A68700C6FBC5 /* DIshLandscapeCollectionViewCell.swift in Sources */,
+				1298717E263CC84700A81962 /* ApiResponse.swift in Sources */,
 				129BF1DF25C519E5002B4321 /* HomeViewController.swift in Sources */,
+				12987175263CB92E00A81962 /* Route.swift in Sources */,
+				12987170263CB89200A81962 /* NetworkService.swift in Sources */,
 				12306A0925E13EC300C6FBC5 /* DishCategory.swift in Sources */,
 				12306A1025E13FAF00C6FBC5 /* String+Extension.swift in Sources */,
 				12306A1425E142A000C6FBC5 /* CardView.swift in Sources */,
 				12306A6825E1D01600C6FBC5 /* ListDishesViewController.swift in Sources */,
+				1298717B263CC2D300A81962 /* AppError.swift in Sources */,
 				129BF1DB25C50E1A002B4321 /* OnboardingCollectionViewCell.swift in Sources */,
 				12306A1F25E147A400C6FBC5 /* Dish.swift in Sources */,
 				12306A1A25E1463500C6FBC5 /* DishPortraitCollectionViewCell.swift in Sources */,

@@ -1,18 +1,35 @@
 PODS:
+  - IQKeyboardManagerSwift (6.5.6)
   - Kingfisher (5.15.6):
     - Kingfisher/Core (= 5.15.6)
   - Kingfisher/Core (5.15.6)
+  - ProgressHUD (2.51)
 
 DEPENDENCIES:
+  - IQKeyboardManagerSwift
   - Kingfisher
+  - ProgressHUD (from `https://github.com/relatedcode/ProgressHUD.git`, commit `83c3801e9aa69be157a47c40cdd8702bfaf29213`)
 
 SPEC REPOS:
   trunk:
+    - IQKeyboardManagerSwift
     - Kingfisher
 
-SPEC CHECKSUMS:
-  Kingfisher: b3554e7bf6106115b44e8795300bad580ef2fdc7
+EXTERNAL SOURCES:
+  ProgressHUD:
+    :commit: 83c3801e9aa69be157a47c40cdd8702bfaf29213
+    :git: https://github.com/relatedcode/ProgressHUD.git
 
-PODFILE CHECKSUM: 7d2b06e8c26883c970f6d75805f27d877e06b94b
+CHECKOUT OPTIONS:
+  ProgressHUD:
+    :commit: 83c3801e9aa69be157a47c40cdd8702bfaf29213
+    :git: https://github.com/relatedcode/ProgressHUD.git
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  Kingfisher: b3554e7bf6106115b44e8795300bad580ef2fdc7
+  ProgressHUD: 54b4c2fa202bf3da7dddc1c698ae4e6376333bd9
+
+PODFILE CHECKSUM: 9e5b240ceb63b7dd499c54495cb2fd9ade35112f
 
 COCOAPODS: 1.9.3

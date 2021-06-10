@@ -6,23 +6,35 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class ListOrdersViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var orders: [Order] = [
-        .init(id: "id", name: "Emmanuel Okwara", dish: .init(id: "id1", name: "Garri", description: "This is the best I have ever tasted", image: "https://picsum.photos/100/200", calories: 34)),
-        .init(id: "id", name: "Uzoh Okwara", dish: .init(id: "id1", name: "Beans and Garri", description: "This is the best I have ever tasted", image: "https://picsum.photos/100/200", calories: 34)),
-        .init(id: "id", name: "David Okwara", dish: .init(id: "id1", name: "Rice and Stew", description: "This is the best I have ever tasted", image: "https://picsum.photos/100/200", calories: 34)),
-        .init(id: "id", name: "Grace Okwara", dish: .init(id: "id1", name: "Fried Yam", description: "This is the best I have ever tasted", image: "https://picsum.photos/100/200", calories: 34)),
-    ]
+    var orders: [Order] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Orders"
         registerCells()
+        
+        ProgressHUD.show()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        NetworkService.shared.fetchOrders { [weak self] (result) in
+            switch result {
+            case .success(let orders):
+                ProgressHUD.dismiss()
+                
+                self?.orders = orders
+                self?.tableView.reloadData()
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+            }
+        }
     }
 
     private func registerCells() {
