@@ -20,3 +20,4 @@ This repo contains projects that were developed throughout the tutorial series
 - [URLSession DownloadTask](https://github.com/EMacco/ios-tutorials/tree/URL-Session-Download-Task)
 - [Encodable & Decodable](https://github.com/EMacco/ios-tutorials/tree/Encodable-Decodable)
 - [Yummie Complete UI](https://github.com/EMacco/ios-tutorials/tree/yummie-ui)
+- [Yummie Full App](https://github.com/EMacco/ios-tutorials/tree/yummie-network-connection)
