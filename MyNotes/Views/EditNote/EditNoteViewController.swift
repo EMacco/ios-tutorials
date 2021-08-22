@@ -32,18 +32,14 @@ class EditNoteViewController: UIViewController {
     
     // MARK:- Methods to implement
     private func updateNote() {
-        // TODO update the note in database
-        print("Updating note")
-        
         note.lastUpdated = Date()
+        CoreDataManager.shared.save()
         delegate?.refreshNotes()
     }
     
     private func deleteNote() {
-        // TODO delete the note from database
-        print("Deleting note")
-        
         delegate?.deleteNote(with: note.id)
+        CoreDataManager.shared.deleteNote(note)
     }
 }
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1228A73526D1D6AD0038129E /* MyNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1228A73326D1D6AD0038129E /* MyNotes.xcdatamodeld */; };
+		1228A73A26D1D7510038129E /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1228A73826D1D7510038129E /* Note+CoreDataClass.swift */; };
+		1228A73B26D1D7510038129E /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1228A73926D1D7510038129E /* Note+CoreDataProperties.swift */; };
+		1228A73F26D1D8EF0038129E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1228A73E26D1D8EF0038129E /* CoreDataManager.swift */; };
 		124C538726CE867500FDD253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C538626CE867500FDD253 /* AppDelegate.swift */; };
 		124C538926CE867500FDD253 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C538826CE867500FDD253 /* SceneDelegate.swift */; };
 		124C538E26CE867500FDD253 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124C538C26CE867500FDD253 /* Main.storyboard */; };
@@ -15,11 +19,14 @@
 		124C53A126CE947600FDD253 /* ListNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C53A026CE947600FDD253 /* ListNotesViewController.swift */; };
 		124C53A626CE950600FDD253 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C53A526CE950600FDD253 /* EditNoteViewController.swift */; };
 		124C53AA26CE955B00FDD253 /* ListNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C53A926CE955B00FDD253 /* ListNoteTableViewCell.swift */; };
-		124C53AE26CE96C600FDD253 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C53AD26CE96C600FDD253 /* Note.swift */; };
 		124C53B226CE9F1000FDD253 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C53B126CE9F1000FDD253 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1228A73426D1D6AD0038129E /* MyNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyNotes.xcdatamodel; sourceTree = "<group>"; };
+		1228A73826D1D7510038129E /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1228A73926D1D7510038129E /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1228A73E26D1D8EF0038129E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		124C538326CE867500FDD253 /* MyNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		124C538626CE867500FDD253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		124C538826CE867500FDD253 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,7 +37,6 @@
 		124C53A026CE947600FDD253 /* ListNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNotesViewController.swift; sourceTree = "<group>"; };
 		124C53A526CE950600FDD253 /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
 		124C53A926CE955B00FDD253 /* ListNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNoteTableViewCell.swift; sourceTree = "<group>"; };
-		124C53AD26CE96C600FDD253 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		124C53B126CE9F1000FDD253 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +95,10 @@
 		124C539D26CE943800FDD253 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				124C53AD26CE96C600FDD253 /* Note.swift */,
+				1228A73826D1D7510038129E /* Note+CoreDataClass.swift */,
+				1228A73926D1D7510038129E /* Note+CoreDataProperties.swift */,
+				1228A73326D1D6AD0038129E /* MyNotes.xcdatamodeld */,
+				1228A73E26D1D8EF0038129E /* CoreDataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,10 +201,13 @@
 				124C538726CE867500FDD253 /* AppDelegate.swift in Sources */,
 				124C53A126CE947600FDD253 /* ListNotesViewController.swift in Sources */,
 				124C53A626CE950600FDD253 /* EditNoteViewController.swift in Sources */,
+				1228A73526D1D6AD0038129E /* MyNotes.xcdatamodeld in Sources */,
 				124C53AA26CE955B00FDD253 /* ListNoteTableViewCell.swift in Sources */,
+				1228A73A26D1D7510038129E /* Note+CoreDataClass.swift in Sources */,
 				124C53B226CE9F1000FDD253 /* Date+Extension.swift in Sources */,
 				124C538926CE867500FDD253 /* SceneDelegate.swift in Sources */,
-				124C53AE26CE96C600FDD253 /* Note.swift in Sources */,
+				1228A73F26D1D8EF0038129E /* CoreDataManager.swift in Sources */,
+				1228A73B26D1D7510038129E /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +409,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1228A73326D1D6AD0038129E /* MyNotes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1228A73426D1D6AD0038129E /* MyNotes.xcdatamodel */,
+			);
+			currentVersion = 1228A73426D1D6AD0038129E /* MyNotes.xcdatamodel */;
+			path = MyNotes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 124C537B26CE867500FDD253 /* Project object */;
 }
