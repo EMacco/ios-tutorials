@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		1296C1DF2764177600CC9685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1296C1DE2764177600CC9685 /* AppDelegate.swift */; };
 		1296C1E12764177600CC9685 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1296C1E02764177600CC9685 /* SceneDelegate.swift */; };
-		1296C1E32764177600CC9685 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1296C1E22764177600CC9685 /* ViewController.swift */; };
 		1296C1E62764177600CC9685 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1296C1E42764177600CC9685 /* Main.storyboard */; };
 		1296C1E82764177800CC9685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1296C1E72764177800CC9685 /* Assets.xcassets */; };
 		1296C1EB2764177800CC9685 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1296C1E92764177800CC9685 /* LaunchScreen.storyboard */; };
+		1296C1F32764188C00CC9685 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1296C1F22764188C00CC9685 /* LoginViewController.swift */; };
+		1296C1F52764196700CC9685 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1296C1F42764196700CC9685 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1296C1DB2764177600CC9685 /* DesignPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1296C1DE2764177600CC9685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1296C1E02764177600CC9685 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1296C1E22764177600CC9685 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1296C1E52764177600CC9685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1296C1E72764177800CC9685 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1296C1EA2764177800CC9685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1296C1EC2764177800CC9685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1296C1F22764188C00CC9685 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1296C1F42764196700CC9685 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				1296C1DE2764177600CC9685 /* AppDelegate.swift */,
 				1296C1E02764177600CC9685 /* SceneDelegate.swift */,
-				1296C1E22764177600CC9685 /* ViewController.swift */,
 				1296C1E42764177600CC9685 /* Main.storyboard */,
+				1296C1F22764188C00CC9685 /* LoginViewController.swift */,
+				1296C1F42764196700CC9685 /* HomeViewController.swift */,
 				1296C1E72764177800CC9685 /* Assets.xcassets */,
 				1296C1E92764177800CC9685 /* LaunchScreen.storyboard */,
 				1296C1EC2764177800CC9685 /* Info.plist */,
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1296C1E32764177600CC9685 /* ViewController.swift in Sources */,
+				1296C1F32764188C00CC9685 /* LoginViewController.swift in Sources */,
 				1296C1DF2764177600CC9685 /* AppDelegate.swift in Sources */,
 				1296C1E12764177600CC9685 /* SceneDelegate.swift in Sources */,
+				1296C1F52764196700CC9685 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
