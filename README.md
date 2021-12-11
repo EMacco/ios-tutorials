@@ -26,3 +26,4 @@ This repo contains projects that were developed throughout the tutorial series
 - [Note Taking App NSFetchedResultsController](https://github.com/EMacco/ios-tutorials/tree/my-notes-nsfetchedresultscontroller)
 - [SegmentView Tutorial](https://github.com/EMacco/ios-tutorials/tree/segment-view)
 - [UI Testing Starter Project](https://github.com/EMacco/ios-tutorials/tree/ui-testing)
+- [MVC Starter Project](https://github.com/EMacco/ios-tutorials/tree/design-pattern-starter)
