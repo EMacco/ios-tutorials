@@ -27,3 +27,4 @@ This repo contains projects that were developed throughout the tutorial series
 - [SegmentView Tutorial](https://github.com/EMacco/ios-tutorials/tree/segment-view)
 - [UI Testing Starter Project](https://github.com/EMacco/ios-tutorials/tree/ui-testing)
 - [MVC Starter Project](https://github.com/EMacco/ios-tutorials/tree/design-pattern-starter)
+- [MVVM Design Pattern Finished](https://github.com/EMacco/ios-tutorials/tree/mvvm-design-pattern)
