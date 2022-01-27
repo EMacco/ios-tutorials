@@ -28,3 +28,4 @@ This repo contains projects that were developed throughout the tutorial series
 - [UI Testing Starter Project](https://github.com/EMacco/ios-tutorials/tree/ui-testing)
 - [MVC Starter Project](https://github.com/EMacco/ios-tutorials/tree/design-pattern-starter)
 - [MVVM Design Pattern Finished](https://github.com/EMacco/ios-tutorials/tree/mvvm-design-pattern)
+- [Basic Animation & Spring Animation](https://github.com/EMacco/ios-tutorials/tree/basic-animations)
