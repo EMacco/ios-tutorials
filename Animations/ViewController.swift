@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     
     private func springAnimate(show: Bool) {
         UIView.animate(withDuration: 1,
-                       delay: 3,
+                       delay: 0,
                        usingSpringWithDamping: 0.6,
                        initialSpringVelocity: 0.4,
                        options: []) { [weak self] in
