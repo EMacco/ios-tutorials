@@ -29,3 +29,4 @@ This repo contains projects that were developed throughout the tutorial series
 - [MVC Starter Project](https://github.com/EMacco/ios-tutorials/tree/design-pattern-starter)
 - [MVVM Design Pattern Finished](https://github.com/EMacco/ios-tutorials/tree/mvvm-design-pattern)
 - [Basic Animation & Spring Animation](https://github.com/EMacco/ios-tutorials/tree/basic-animations)
+- [Compositional Layout](https://github.com/EMacco/ios-tutorials/tree/compositional-layout)
