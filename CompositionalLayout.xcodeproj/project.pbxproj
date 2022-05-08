@@ -13,6 +13,7 @@
 		E52E5DD22827D82E00ACAAA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52E5DD02827D82E00ACAAA3 /* Main.storyboard */; };
 		E52E5DD42827D83800ACAAA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52E5DD32827D83800ACAAA3 /* Assets.xcassets */; };
 		E52E5DD72827D83800ACAAA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52E5DD52827D83800ACAAA3 /* LaunchScreen.storyboard */; };
+		E52E5DDF2827ED9B00ACAAA3 /* CompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52E5DDE2827ED9B00ACAAA3 /* CompositionalLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E52E5DD32827D83800ACAAA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E52E5DD62827D83800ACAAA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E52E5DD82827D83800ACAAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E52E5DDE2827ED9B00ACAAA3 /* CompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				E52E5DD32827D83800ACAAA3 /* Assets.xcassets */,
 				E52E5DD52827D83800ACAAA3 /* LaunchScreen.storyboard */,
 				E52E5DD82827D83800ACAAA3 /* Info.plist */,
+				E52E5DDE2827ED9B00ACAAA3 /* CompositionalLayout.swift */,
 			);
 			path = CompositionalLayout;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				E52E5DCF2827D82E00ACAAA3 /* ViewController.swift in Sources */,
 				E52E5DCB2827D82E00ACAAA3 /* AppDelegate.swift in Sources */,
 				E52E5DCD2827D82E00ACAAA3 /* SceneDelegate.swift in Sources */,
+				E52E5DDF2827ED9B00ACAAA3 /* CompositionalLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
