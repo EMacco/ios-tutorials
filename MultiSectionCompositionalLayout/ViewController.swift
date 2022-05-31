@@ -16,6 +16,50 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView.collectionViewLayout = createLayout()
+    }
+    
+    private func createLayout() -> UICollectionViewCompositionalLayout {
+        UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnvironment in
+            guard let self = self else { return nil }
+            let section = self.sections[sectionIndex]
+            switch section {
+            case .stories:
+                let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .absolute(70), heightDimension: .absolute(70)), subitems: [item])
+                let section = NSCollectionLayoutSection(group: group)
+                section.orthogonalScrollingBehavior = .continuous
+                section.interGroupSpacing = 10
+                section.contentInsets = .init(top: 0, leading: 10, bottom: 30, trailing: 10)
+                section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
+                section.supplementariesFollowContentInsets = false
+                return section
+            case .popular:
+                let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(0.9), heightDimension: .fractionalHeight(0.6)), subitems: [item])
+                let section = NSCollectionLayoutSection(group: group)
+                section.orthogonalScrollingBehavior = .groupPagingCentered
+                section.interGroupSpacing = 10
+                section.contentInsets = .init(top: 0, leading: 10, bottom: 30, trailing: 10)
+                section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
+                section.supplementariesFollowContentInsets = false
+                return section
+            case .comingSoon:
+                let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .absolute(170), heightDimension: .absolute(80)), subitems: [item])
+                let section = NSCollectionLayoutSection(group: group)
+                section.orthogonalScrollingBehavior = .continuous
+                section.interGroupSpacing = 10
+                section.contentInsets = .init(top: 0, leading: 10, bottom: 0, trailing: 10)
+                section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
+                section.supplementariesFollowContentInsets = false
+                return section
+            }
+        }
+    }
+    
+    private func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
+        .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
     }
 }
 
