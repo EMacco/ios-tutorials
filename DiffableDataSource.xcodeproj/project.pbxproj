@@ -13,6 +13,7 @@
 		E6F884F1286736FD00BDFC1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F884EF286736FD00BDFC1A /* Main.storyboard */; };
 		E6F884F3286736FF00BDFC1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F884F2286736FF00BDFC1A /* Assets.xcassets */; };
 		E6F884F6286736FF00BDFC1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F884F4286736FF00BDFC1A /* LaunchScreen.storyboard */; };
+		E6F884FE28675D8D00BDFC1A /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F884FD28675D8D00BDFC1A /* Section.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E6F884F2286736FF00BDFC1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6F884F5286736FF00BDFC1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6F884F7286736FF00BDFC1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6F884FD28675D8D00BDFC1A /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				E6F884F2286736FF00BDFC1A /* Assets.xcassets */,
 				E6F884F4286736FF00BDFC1A /* LaunchScreen.storyboard */,
 				E6F884F7286736FF00BDFC1A /* Info.plist */,
+				E6F884FD28675D8D00BDFC1A /* Section.swift */,
 			);
 			path = DiffableDataSource;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6F884EE286736FD00BDFC1A /* ViewController.swift in Sources */,
+				E6F884FE28675D8D00BDFC1A /* Section.swift in Sources */,
 				E6F884EA286736FD00BDFC1A /* AppDelegate.swift in Sources */,
 				E6F884EC286736FD00BDFC1A /* SceneDelegate.swift in Sources */,
 			);
@@ -301,7 +305,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.deliveryhero.DiffableDataSource;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macco.DiffableDataSource;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -328,7 +332,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.deliveryhero.DiffableDataSource;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macco.DiffableDataSource;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
