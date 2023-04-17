@@ -1,0 +1,11 @@
+input_dir: ${PROJECT_DIR}/SwiftGenTutorial
+output_dir: ${PROJECT_DIR}/SwiftGenTutorial/SwiftGen
+xcassets:
+  inputs:
+    - Assets.xcassets
+    - Colors.xcassets
+  outputs:
+    - templatePath: ${PROJECT_DIR}/SwiftGenTutorial/SwiftGen/template.stencil
+      params:
+        publicAccess: true
+      output: Assets.generated.swift

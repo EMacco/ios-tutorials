@@ -1,0 +1,40 @@
+// 🤖 This file was code-generated. Do not edit!!!
+
+import UIKit
+{% if catalogs %}
+{% set accessModifier %}{% if param.publicAccess %}public{% else %}internal{% endif %}{% endset %}
+{% macro imagesBlock assets  %}
+  {% for asset in assets %}
+  {% if asset.type == "image" %}
+  static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}: UIImage = UIImage(named: "{{asset.value}}")!
+  {% elif asset.items %}
+  {% call imagesBlock asset.items %}
+  {% endif %}
+  {% endfor %}
+{% endmacro %}
+{% macro colorsBlock assets %}
+  {% for asset in assets %}
+  {% if asset.type == "color" %}
+  static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}: UIColor = UIColor(named: "{{asset.value}}")!
+  {% elif asset.items %}
+  {% call colorsBlock asset.items %}
+  {% endif %}
+  {% endfor %}
+{% endmacro %}
+
+// MARK: - Images
+{{accessModifier}} extension UIImage {
+  {% for catalog in catalogs %}
+  {% call imagesBlock catalog.assets %}
+  {% endfor %}
+}
+
+// MARK: - Colors
+{{accessModifier}} extension UIColor {
+  {% for catalog in catalogs %}
+  {% call colorsBlock catalog.assets %}
+  {% endfor %}
+}
+{% else %}
+// No assets found
+{% endif %}

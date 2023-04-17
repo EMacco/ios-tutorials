@@ -13,6 +13,10 @@
 		E5A3F8B829ECA67C009C6E2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A3F8B629ECA67C009C6E2B /* Main.storyboard */; };
 		E5A3F8BA29ECA67E009C6E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A3F8B929ECA67E009C6E2B /* Assets.xcassets */; };
 		E5A3F8BD29ECA67E009C6E2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A3F8BB29ECA67E009C6E2B /* LaunchScreen.storyboard */; };
+		E5A3F8DA29ECC1EB009C6E2B /* swiftgen.config.yml in Resources */ = {isa = PBXBuildFile; fileRef = E5A3F8D929ECC1EA009C6E2B /* swiftgen.config.yml */; };
+		E5A3F8DC29ECC27C009C6E2B /* template.stencil in Sources */ = {isa = PBXBuildFile; fileRef = E5A3F8DB29ECC27C009C6E2B /* template.stencil */; };
+		E5A3F8DE29ECC3F4009C6E2B /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A3F8DD29ECC3F4009C6E2B /* Assets.generated.swift */; };
+		E5A3F8E129ECC547009C6E2B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A3F8E029ECC547009C6E2B /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		E5A3F8B929ECA67E009C6E2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5A3F8BC29ECA67E009C6E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5A3F8BE29ECA67E009C6E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5A3F8D929ECC1EA009C6E2B /* swiftgen.config.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.config.yml; sourceTree = "<group>"; };
+		E5A3F8DB29ECC27C009C6E2B /* template.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = template.stencil; sourceTree = "<group>"; };
+		E5A3F8DD29ECC3F4009C6E2B /* Assets.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
+		E5A3F8E029ECC547009C6E2B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,27 @@
 		E5A3F8AF29ECA67C009C6E2B /* SwiftGenTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				E5A3F8D829ECC1C9009C6E2B /* SwiftGen */,
 				E5A3F8B029ECA67C009C6E2B /* AppDelegate.swift */,
 				E5A3F8B229ECA67C009C6E2B /* SceneDelegate.swift */,
 				E5A3F8B429ECA67C009C6E2B /* ViewController.swift */,
 				E5A3F8B629ECA67C009C6E2B /* Main.storyboard */,
 				E5A3F8B929ECA67E009C6E2B /* Assets.xcassets */,
+				E5A3F8E029ECC547009C6E2B /* Colors.xcassets */,
 				E5A3F8BB29ECA67E009C6E2B /* LaunchScreen.storyboard */,
 				E5A3F8BE29ECA67E009C6E2B /* Info.plist */,
 			);
 			path = SwiftGenTutorial;
+			sourceTree = "<group>";
+		};
+		E5A3F8D829ECC1C9009C6E2B /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				E5A3F8D929ECC1EA009C6E2B /* swiftgen.config.yml */,
+				E5A3F8DB29ECC27C009C6E2B /* template.stencil */,
+				E5A3F8DD29ECC3F4009C6E2B /* Assets.generated.swift */,
+			);
+			path = SwiftGen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +94,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5A3F8C129ECA67E009C6E2B /* Build configuration list for PBXNativeTarget "SwiftGenTutorial" */;
 			buildPhases = (
+				E5A3F8DF29ECC411009C6E2B /* Swift Gen */,
 				E5A3F8A929ECA67C009C6E2B /* Sources */,
 				E5A3F8AA29ECA67C009C6E2B /* Frameworks */,
 				E5A3F8AB29ECA67C009C6E2B /* Resources */,
@@ -125,13 +146,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5A3F8E129ECC547009C6E2B /* Colors.xcassets in Resources */,
 				E5A3F8BD29ECA67E009C6E2B /* LaunchScreen.storyboard in Resources */,
 				E5A3F8BA29ECA67E009C6E2B /* Assets.xcassets in Resources */,
+				E5A3F8DA29ECC1EB009C6E2B /* swiftgen.config.yml in Resources */,
 				E5A3F8B829ECA67C009C6E2B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E5A3F8DF29ECC411009C6E2B /* Swift Gen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Gen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftgen >& /dev/null; then\n  swiftgen config run --config SwiftGenTutorial/SwiftGen/swiftgen.config.yml\nelse\n  echo \"error: SwiftGen not installed, download from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E5A3F8A929ECA67C009C6E2B /* Sources */ = {
@@ -139,8 +183,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5A3F8B529ECA67C009C6E2B /* ViewController.swift in Sources */,
+				E5A3F8DC29ECC27C009C6E2B /* template.stencil in Sources */,
 				E5A3F8B129ECA67C009C6E2B /* AppDelegate.swift in Sources */,
 				E5A3F8B329ECA67C009C6E2B /* SceneDelegate.swift in Sources */,
+				E5A3F8DE29ECC3F4009C6E2B /* Assets.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
