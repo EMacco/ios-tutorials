@@ -32,3 +32,5 @@ This repo contains projects that were developed throughout the tutorial series
 - [Compositional Layout](https://github.com/EMacco/ios-tutorials/tree/compositional-layout)
 - [Multi Section Compositional Layout Starter](https://github.com/EMacco/ios-tutorials/tree/multi-section-collectionview-starter)
 - [Multi Section Compositional Layout Finished](https://github.com/EMacco/ios-tutorials/tree/multi-section-collectionview-finished)
+- [SwiftGen Finished](https://github.com/EMacco/ios-tutorials/tree/swiftgen-finished)
+
